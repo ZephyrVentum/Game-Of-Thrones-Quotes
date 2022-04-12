@@ -7,16 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D95036A828046BDB00A3EDB2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95036A728046BDB00A3EDB2 /* HomeViewController.swift */; };
 		D96D58CF2802F01A00448FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58CE2802F01A00448FCF /* AppDelegate.swift */; };
 		D96D58D12802F01A00448FCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58D02802F01A00448FCF /* SceneDelegate.swift */; };
-		D96D58D32802F01A00448FCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58D22802F01A00448FCF /* ViewController.swift */; };
-		D96D58D62802F01A00448FCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96D58D42802F01A00448FCF /* Main.storyboard */; };
 		D96D58D92802F01A00448FCF /* GameOfThronesQuotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D96D58D72802F01A00448FCF /* GameOfThronesQuotes.xcdatamodeld */; };
 		D96D58DB2802F01C00448FCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96D58DA2802F01C00448FCF /* Assets.xcassets */; };
 		D96D58DE2802F01C00448FCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96D58DC2802F01C00448FCF /* LaunchScreen.storyboard */; };
 		D96D58E92802F01D00448FCF /* GameOfThronesQuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58E82802F01D00448FCF /* GameOfThronesQuotesTests.swift */; };
 		D96D58F32802F01D00448FCF /* GameOfThronesQuotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58F22802F01D00448FCF /* GameOfThronesQuotesUITests.swift */; };
 		D96D58F52802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58F42802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift */; };
+		D98F13C12805B9E100714F1E /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13BF2805B9E100714F1E /* HistoryCell.swift */; };
+		D98F13C22805B9E100714F1E /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98F13C02805B9E100714F1E /* HistoryCell.xib */; };
+		D9A47F39280569AE00D9F453 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A47F38280569AE00D9F453 /* Home.storyboard */; };
+		D9A47F3C280570A900D9F453 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A47F3B280570A900D9F453 /* QuoteViewController.swift */; };
+		D9A47F3E2805712D00D9F453 /* Quote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A47F3D2805712D00D9F453 /* Quote.storyboard */; };
+		D9A47F412805755D00D9F453 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A47F402805755D00D9F453 /* HistoryViewController.swift */; };
+		D9A47F432805757100D9F453 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A47F422805757100D9F453 /* History.storyboard */; };
+		D9A47F452805858700D9F453 /* QuotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A47F442805858700D9F453 /* QuotePresenter.swift */; };
+		D9A47F47280588C800D9F453 /* QuoteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A47F46280588C800D9F453 /* QuoteInteractor.swift */; };
+		D9A47F492805AD0D00D9F453 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A47F482805AD0D00D9F453 /* HistoryPresenter.swift */; };
+		D9A47F4B2805AD7400D9F453 /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A47F4A2805AD7400D9F453 /* HistoryInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D95036A728046BDB00A3EDB2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D96D58CB2802F01A00448FCF /* GameOfThronesQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThronesQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96D58CE2802F01A00448FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D96D58D02802F01A00448FCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D96D58D22802F01A00448FCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D96D58D52802F01A00448FCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D96D58D82802F01A00448FCF /* GameOfThronesQuotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameOfThronesQuotes.xcdatamodel; sourceTree = "<group>"; };
 		D96D58DA2802F01C00448FCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D96D58DD2802F01C00448FCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +60,17 @@
 		D96D58EE2802F01D00448FCF /* GameOfThronesQuotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfThronesQuotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96D58F22802F01D00448FCF /* GameOfThronesQuotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfThronesQuotesUITests.swift; sourceTree = "<group>"; };
 		D96D58F42802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfThronesQuotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D98F13BF2805B9E100714F1E /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		D98F13C02805B9E100714F1E /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		D9A47F38280569AE00D9F453 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D9A47F3B280570A900D9F453 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		D9A47F3D2805712D00D9F453 /* Quote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quote.storyboard; sourceTree = "<group>"; };
+		D9A47F402805755D00D9F453 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D9A47F422805757100D9F453 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		D9A47F442805858700D9F453 /* QuotePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotePresenter.swift; sourceTree = "<group>"; };
+		D9A47F46280588C800D9F453 /* QuoteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteInteractor.swift; sourceTree = "<group>"; };
+		D9A47F482805AD0D00D9F453 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		D9A47F4A2805AD7400D9F453 /* HistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +98,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D95036A528046B4800A3EDB2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D95036A728046BDB00A3EDB2 /* HomeViewController.swift */,
+				D9A47F38280569AE00D9F453 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D95036A628046B8F00A3EDB2 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D9A47F3F2805750000D9F453 /* History */,
+				D9A47F3A28056C7D00D9F453 /* Quote */,
+				D95036A528046B4800A3EDB2 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		D96D58C22802F01A00448FCF = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +140,9 @@
 		D96D58CD2802F01A00448FCF /* GameOfThronesQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				D95036A628046B8F00A3EDB2 /* Screens */,
 				D96D58CE2802F01A00448FCF /* AppDelegate.swift */,
 				D96D58D02802F01A00448FCF /* SceneDelegate.swift */,
-				D96D58D22802F01A00448FCF /* ViewController.swift */,
-				D96D58D42802F01A00448FCF /* Main.storyboard */,
 				D96D58DA2802F01C00448FCF /* Assets.xcassets */,
 				D96D58DC2802F01C00448FCF /* LaunchScreen.storyboard */,
 				D96D58DF2802F01C00448FCF /* Info.plist */,
@@ -128,6 +166,38 @@
 				D96D58F42802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift */,
 			);
 			path = GameOfThronesQuotesUITests;
+			sourceTree = "<group>";
+		};
+		D98F13BE2805B9A100714F1E /* HistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				D98F13BF2805B9E100714F1E /* HistoryCell.swift */,
+				D98F13C02805B9E100714F1E /* HistoryCell.xib */,
+			);
+			path = HistoryCell;
+			sourceTree = "<group>";
+		};
+		D9A47F3A28056C7D00D9F453 /* Quote */ = {
+			isa = PBXGroup;
+			children = (
+				D9A47F3B280570A900D9F453 /* QuoteViewController.swift */,
+				D9A47F3D2805712D00D9F453 /* Quote.storyboard */,
+				D9A47F442805858700D9F453 /* QuotePresenter.swift */,
+				D9A47F46280588C800D9F453 /* QuoteInteractor.swift */,
+			);
+			path = Quote;
+			sourceTree = "<group>";
+		};
+		D9A47F3F2805750000D9F453 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				D98F13BE2805B9A100714F1E /* HistoryCell */,
+				D9A47F402805755D00D9F453 /* HistoryViewController.swift */,
+				D9A47F422805757100D9F453 /* History.storyboard */,
+				D9A47F482805AD0D00D9F453 /* HistoryPresenter.swift */,
+				D9A47F4A2805AD7400D9F453 /* HistoryInteractor.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,8 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D96D58DE2802F01C00448FCF /* LaunchScreen.storyboard in Resources */,
+				D9A47F3E2805712D00D9F453 /* Quote.storyboard in Resources */,
 				D96D58DB2802F01C00448FCF /* Assets.xcassets in Resources */,
-				D96D58D62802F01A00448FCF /* Main.storyboard in Resources */,
+				D9A47F432805757100D9F453 /* History.storyboard in Resources */,
+				D98F13C22805B9E100714F1E /* HistoryCell.xib in Resources */,
+				D9A47F39280569AE00D9F453 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +334,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D96D58D32802F01A00448FCF /* ViewController.swift in Sources */,
+				D95036A828046BDB00A3EDB2 /* HomeViewController.swift in Sources */,
+				D9A47F492805AD0D00D9F453 /* HistoryPresenter.swift in Sources */,
+				D9A47F47280588C800D9F453 /* QuoteInteractor.swift in Sources */,
 				D96D58CF2802F01A00448FCF /* AppDelegate.swift in Sources */,
+				D9A47F452805858700D9F453 /* QuotePresenter.swift in Sources */,
 				D96D58D92802F01A00448FCF /* GameOfThronesQuotes.xcdatamodeld in Sources */,
+				D9A47F412805755D00D9F453 /* HistoryViewController.swift in Sources */,
+				D9A47F4B2805AD7400D9F453 /* HistoryInteractor.swift in Sources */,
 				D96D58D12802F01A00448FCF /* SceneDelegate.swift in Sources */,
+				D9A47F3C280570A900D9F453 /* QuoteViewController.swift in Sources */,
+				D98F13C12805B9E100714F1E /* HistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +381,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D96D58D42802F01A00448FCF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D96D58D52802F01A00448FCF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D96D58DC2802F01C00448FCF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,9 +519,10 @@
 				INFOPLIST_FILE = GameOfThronesQuotes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,9 +547,10 @@
 				INFOPLIST_FILE = GameOfThronesQuotes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
