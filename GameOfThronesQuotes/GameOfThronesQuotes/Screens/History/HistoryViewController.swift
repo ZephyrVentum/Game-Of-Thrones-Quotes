@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HistoryDisplayLogic {
-    func displayData()
+    func displayHistoryQuotes(data: [Quote])
 }
 
 class HistoryViewController: UIViewController {
@@ -16,8 +16,9 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var interactor: HistoryInteractor?
+    private(set) var router: HistoryRouter?
     
-    private var historyQuotes = [String]()
+    private var historyQuotes = [Quote]()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -33,21 +34,30 @@ class HistoryViewController: UIViewController {
         let viewController = self
         let presenter = HistoryPresenter()
         let interactor = HistoryInteractor()
+        let router = HistoryRouter()
         interactor.presenter = presenter
         presenter.viewController = viewController
         viewController.interactor = interactor
+        viewController.router = router
+        router.viewController = viewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        // Do any additional setup after loading the view.
+        interactor?.obtainHistoryQuotes()
     }
     
     private func configureTableView(){
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView(frame: .zero)
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.register(
+            UINib(
+                nibName: "HistoryCell",
+                bundle: nil),
+            forCellReuseIdentifier: HistoryCell.cellIdentifier)
     }
 }
 
@@ -63,13 +73,26 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard
+            let cell = tableView.dequeueReusableCell(
+            withIdentifier: HistoryCell.cellIdentifier,
+            for: indexPath) as? HistoryCell
+        else { return UITableViewCell() }
+        cell.setup(data: historyQuotes[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        router?.navigateToQuoteTab(quote: historyQuotes[indexPath.row])
     }
 }
 
 extension HistoryViewController: HistoryDisplayLogic{
-    func displayData() {
-
+    
+    func displayHistoryQuotes(data: [Quote]) {
+        historyQuotes.removeAll()
+        historyQuotes.append(contentsOf: data)
+        tableView.reloadData()
     }
-        
 }

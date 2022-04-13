@@ -17,7 +17,18 @@ class HistoryInteractor {
 }
 
 extension HistoryInteractor: HistoryBussinesLogic {
+    
     func obtainHistoryQuotes() {
-        presenter?.presentData()
+        var tempEntities = [QuoteEntity]()
+        for i in 0...11 {
+            let tempEntity = QuoteEntity(id: 0,
+                                         author: "Govno \(i)",
+                                         text: "govno govno \(i)",
+                                         house: "Govno",
+                                         date: "01/01/1970")
+            
+            tempEntities.append(tempEntity)
+        }
+        presenter?.presentHistoryQuotes(data:tempEntities)
     }
 }

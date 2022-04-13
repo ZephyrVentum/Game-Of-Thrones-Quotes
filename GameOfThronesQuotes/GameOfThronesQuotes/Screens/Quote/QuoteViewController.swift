@@ -13,8 +13,16 @@ protocol QuoteDisplayLogic {
 
 class QuoteViewController: UIViewController {
 
+    @IBOutlet weak var quoteAuthor: UILabel!
+    
     private var interactor: QuoteInteractor?
-
+    var quoteToShow: Quote? {
+        didSet {
+            guard isViewLoaded else { return }
+            quoteAuthor.text = quoteToShow?.author
+        }
+    }
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -36,7 +44,6 @@ class QuoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
 }

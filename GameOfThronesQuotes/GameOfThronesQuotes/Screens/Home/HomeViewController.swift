@@ -9,21 +9,33 @@ import UIKit
 
 class HomeViewController: UITabBarController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    private(set) var router: HomeRouter?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
     }
-    */
-
+    
+    private func setup(){
+        let tabBarController = self
+        let router = HomeRouter()
+        router.viewController = tabBarController
+        tabBarController.router = router
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupHistoryRouter()
+    }
+    
+    private func setupHistoryRouter(){
+        let historyViewController = viewControllers?.last as? HistoryViewController
+        historyViewController?.router?.quoteTabDelegate = router?.viewController
+    }
 }

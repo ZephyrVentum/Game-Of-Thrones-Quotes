@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HistoryPresentationLogic {
-    func presentData()
+    func presentHistoryQuotes(data: [QuoteEntity])
 }
 
 class HistoryPresenter{
@@ -16,7 +16,16 @@ class HistoryPresenter{
 }
 
 extension HistoryPresenter : HistoryPresentationLogic {
-    func presentData() {
-        
+    
+    func presentHistoryQuotes(data: [QuoteEntity]) {
+        let viewModel = data.map{ entity -> Quote in
+            let quote = Quote(id: entity.id,
+                              author: entity.author,
+                              text: entity.text,
+                              house: entity.house,
+                              date: entity.date)
+            return quote
+        }
+        viewController?.displayHistoryQuotes(data: viewModel)
     }
 }

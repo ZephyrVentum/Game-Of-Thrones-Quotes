@@ -18,6 +18,11 @@
 		D96D58F52802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58F42802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift */; };
 		D98F13C12805B9E100714F1E /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13BF2805B9E100714F1E /* HistoryCell.swift */; };
 		D98F13C22805B9E100714F1E /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98F13C02805B9E100714F1E /* HistoryCell.xib */; };
+		D98F13CA2806C4DF00714F1E /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13C92806C4DF00714F1E /* Quote.swift */; };
+		D98F13CD2806C5D200714F1E /* QuoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13CC2806C5D200714F1E /* QuoteResponse.swift */; };
+		D98F13D02806CE7800714F1E /* QuoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13CF2806CE7800714F1E /* QuoteEntity.swift */; };
+		D98F13D2280712E800714F1E /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13D1280712E800714F1E /* HistoryRouter.swift */; };
+		D98F13D42807196F00714F1E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13D32807196F00714F1E /* HomeRouter.swift */; };
 		D9A47F39280569AE00D9F453 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A47F38280569AE00D9F453 /* Home.storyboard */; };
 		D9A47F3C280570A900D9F453 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A47F3B280570A900D9F453 /* QuoteViewController.swift */; };
 		D9A47F3E2805712D00D9F453 /* Quote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A47F3D2805712D00D9F453 /* Quote.storyboard */; };
@@ -62,6 +67,11 @@
 		D96D58F42802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfThronesQuotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D98F13BF2805B9E100714F1E /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		D98F13C02805B9E100714F1E /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		D98F13C92806C4DF00714F1E /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		D98F13CC2806C5D200714F1E /* QuoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteResponse.swift; sourceTree = "<group>"; };
+		D98F13CF2806CE7800714F1E /* QuoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEntity.swift; sourceTree = "<group>"; };
+		D98F13D1280712E800714F1E /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
+		D98F13D32807196F00714F1E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		D9A47F38280569AE00D9F453 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		D9A47F3B280570A900D9F453 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		D9A47F3D2805712D00D9F453 /* Quote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quote.storyboard; sourceTree = "<group>"; };
@@ -103,6 +113,7 @@
 			children = (
 				D95036A728046BDB00A3EDB2 /* HomeViewController.swift */,
 				D9A47F38280569AE00D9F453 /* Home.storyboard */,
+				D98F13D32807196F00714F1E /* HomeRouter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -140,6 +151,8 @@
 		D96D58CD2802F01A00448FCF /* GameOfThronesQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				D98F13C82806BF2C00714F1E /* Workers */,
+				D98F13C72806BED000714F1E /* Models */,
 				D95036A628046B8F00A3EDB2 /* Screens */,
 				D96D58CE2802F01A00448FCF /* AppDelegate.swift */,
 				D96D58D02802F01A00448FCF /* SceneDelegate.swift */,
@@ -177,6 +190,39 @@
 			path = HistoryCell;
 			sourceTree = "<group>";
 		};
+		D98F13C72806BED000714F1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D98F13C92806C4DF00714F1E /* Quote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D98F13C82806BF2C00714F1E /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				D98F13CE2806CE5400714F1E /* Database */,
+				D98F13CB2806C5A700714F1E /* Network */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		D98F13CB2806C5A700714F1E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D98F13CC2806C5D200714F1E /* QuoteResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D98F13CE2806CE5400714F1E /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				D98F13CF2806CE7800714F1E /* QuoteEntity.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		D9A47F3A28056C7D00D9F453 /* Quote */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +242,7 @@
 				D9A47F422805757100D9F453 /* History.storyboard */,
 				D9A47F482805AD0D00D9F453 /* HistoryPresenter.swift */,
 				D9A47F4A2805AD7400D9F453 /* HistoryInteractor.swift */,
+				D98F13D1280712E800714F1E /* HistoryRouter.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -335,10 +382,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95036A828046BDB00A3EDB2 /* HomeViewController.swift in Sources */,
+				D98F13CD2806C5D200714F1E /* QuoteResponse.swift in Sources */,
 				D9A47F492805AD0D00D9F453 /* HistoryPresenter.swift in Sources */,
 				D9A47F47280588C800D9F453 /* QuoteInteractor.swift in Sources */,
+				D98F13D2280712E800714F1E /* HistoryRouter.swift in Sources */,
+				D98F13D42807196F00714F1E /* HomeRouter.swift in Sources */,
 				D96D58CF2802F01A00448FCF /* AppDelegate.swift in Sources */,
+				D98F13CA2806C4DF00714F1E /* Quote.swift in Sources */,
 				D9A47F452805858700D9F453 /* QuotePresenter.swift in Sources */,
+				D98F13D02806CE7800714F1E /* QuoteEntity.swift in Sources */,
 				D96D58D92802F01A00448FCF /* GameOfThronesQuotes.xcdatamodeld in Sources */,
 				D9A47F412805755D00D9F453 /* HistoryViewController.swift in Sources */,
 				D9A47F4B2805AD7400D9F453 /* HistoryInteractor.swift in Sources */,

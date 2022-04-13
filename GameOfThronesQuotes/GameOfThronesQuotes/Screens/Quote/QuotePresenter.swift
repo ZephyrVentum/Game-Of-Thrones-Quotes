@@ -8,7 +8,7 @@
 import Foundation
 
 protocol QuotePresentationLogic {
-    func presentData()
+    func presentQuoteResponse(data: QuoteResponse)
 }
 
 class QuotePresenter{
@@ -16,7 +16,8 @@ class QuotePresenter{
 }
 
 extension QuotePresenter : QuotePresentationLogic {
-    func presentData() {
+    func presentQuoteResponse(data: QuoteResponse) {
         
     }
+
 }

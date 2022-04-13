@@ -18,6 +18,13 @@ class QuoteInteractor {
 
 extension QuoteInteractor:QuoteBussinesLogic{
     func fetchRandomQuote() {
-        presenter?.presentData()
+        presenter?.presentQuoteResponse(
+            data: QuoteResponse(sentence: "govno govno",
+                                character: CharacterResponse(
+                                    name: "Govno",
+                                    slug: "govno",
+                                    house: HouseResponse(
+                                        name: "Govno",
+                                        slug: "govno"))))
     }
 }
