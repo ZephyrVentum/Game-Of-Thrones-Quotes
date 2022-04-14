@@ -46,6 +46,10 @@ class QuoteViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func didRandomQuoteClick(_ sender: Any) {
+        interactor?.fetchRandomQuote()
+    }
+    
 }
 
 extension QuoteViewController: QuoteDisplayLogic{

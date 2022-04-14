@@ -17,7 +17,11 @@ class QuotePresenter{
 
 extension QuotePresenter : QuotePresentationLogic {
     func presentQuoteResponse(data: QuoteResponse) {
-        
+        viewController?.quoteToShow = Quote(id: 0,
+                                            author: data.character.name,
+                                            text: data.sentence,
+                                            house: data.character.house.name ?? "",
+                                            date: "01/01/1970")
     }
 
 }

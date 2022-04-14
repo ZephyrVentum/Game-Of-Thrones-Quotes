@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct QuoteResponse {
+struct QuoteResponse : Codable {
     let sentence: String
     let character: CharacterResponse
 }
 
-struct CharacterResponse {
+struct CharacterResponse : Codable {
     let name: String
     let slug: String
     let house: HouseResponse
 }
 
-struct HouseResponse {
-    let name: String
-    let slug: String
+struct HouseResponse : Codable {
+    let name: String?
+    let slug: String?
 }
