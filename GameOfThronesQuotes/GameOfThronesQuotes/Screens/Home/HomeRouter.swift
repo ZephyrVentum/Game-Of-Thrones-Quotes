@@ -11,14 +11,31 @@ protocol NavigateToQuoteTabDelegate: AnyObject {
     func navigateToQuoteTab(quote: Quote)
 }
 
-class HomeRouter {
-    weak var viewController: HomeViewController?
+protocol SetupToQuoteTabDelegate {
+    func setup()
 }
 
-extension HomeViewController : NavigateToQuoteTabDelegate {
+class HomeRouter {
+    weak var viewController: HomeViewController?
+    
+    init(viewController: HomeViewController?){
+        self.viewController = viewController
+    }
+}
+
+extension HomeRouter : NavigateToQuoteTabDelegate {
+    
     func navigateToQuoteTab(quote: Quote) {
-        let quoteViewController = viewControllers?.first as? QuoteViewController
-        quoteViewController?.quoteToShow = quote
-        selectedIndex = 0
+        let quoteViewController = viewController?.viewControllers?.first as? QuoteViewController
+        quoteViewController?.router?.handleHistoryQuoteDelegate?.handleHistoryQuote(quote: quote)
+        viewController?.selectedIndex = 0
+    }
+}
+
+extension HomeRouter : SetupToQuoteTabDelegate {
+    
+     func setup(){
+        let historyViewController = viewController?.viewControllers?.last as? HistoryViewController
+        historyViewController?.router.quoteTabDelegate = self
     }
 }

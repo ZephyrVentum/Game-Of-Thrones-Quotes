@@ -7,16 +7,20 @@
 
 import Foundation
 
-protocol HistoryBussinesLogic {
+protocol HistoryObtaining {
     func obtainHistoryQuotes()
 }
 
 class HistoryInteractor {
-    var presenter: HistoryPresenter?
+    private var presenter: HistoryPresenter
+    
+    init(viewController: HistoryViewController?){
+        self.presenter = HistoryPresenter(viewController: viewController)
+    }
     
 }
 
-extension HistoryInteractor: HistoryBussinesLogic {
+extension HistoryInteractor : HistoryObtaining {
     
     func obtainHistoryQuotes() {
         var tempEntities = [QuoteEntity]()
@@ -29,6 +33,6 @@ extension HistoryInteractor: HistoryBussinesLogic {
             
             tempEntities.append(tempEntity)
         }
-        presenter?.presentHistoryQuotes(data:tempEntities)
+        presenter.presentHistoryQuotes(data:tempEntities)
     }
 }

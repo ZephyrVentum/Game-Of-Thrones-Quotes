@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UITabBarController {
 
-    private(set) var router: HomeRouter?
+    private(set) var router: HomeRouter!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -22,20 +22,11 @@ class HomeViewController: UITabBarController {
     }
     
     private func setup(){
-        let tabBarController = self
-        let router = HomeRouter()
-        router.viewController = tabBarController
-        tabBarController.router = router
-        
+        router = HomeRouter(viewController: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupHistoryRouter()
-    }
-    
-    private func setupHistoryRouter(){
-        let historyViewController = viewControllers?.last as? HistoryViewController
-        historyViewController?.router?.quoteTabDelegate = router?.viewController
+        router.setup()
     }
 }

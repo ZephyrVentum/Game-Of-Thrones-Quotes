@@ -12,14 +12,12 @@ protocol HistoryDisplayLogic {
 }
 
 class HistoryViewController: UIViewController {
-
+    private var interactor: HistoryInteractor!
+    private(set) var router: HistoryRouter!
+    private var historyQuotes = [Quote]()
+    
     @IBOutlet weak var tableView: UITableView!
     
-    private var interactor: HistoryInteractor?
-    private(set) var router: HistoryRouter?
-    
-    private var historyQuotes = [Quote]()
-
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -31,15 +29,8 @@ class HistoryViewController: UIViewController {
     }
     
     private func setup(){
-        let viewController = self
-        let presenter = HistoryPresenter()
-        let interactor = HistoryInteractor()
-        let router = HistoryRouter()
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        viewController.interactor = interactor
-        viewController.router = router
-        router.viewController = viewController
+        interactor = HistoryInteractor(viewController: self)
+        router = HistoryRouter(viewController: self)
     }
     
     override func viewDidLoad() {
@@ -84,7 +75,7 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        router?.navigateToQuoteTab(quote: historyQuotes[indexPath.row])
+        router.navigateToQuoteTab(quote: historyQuotes[indexPath.row])
     }
 }
 

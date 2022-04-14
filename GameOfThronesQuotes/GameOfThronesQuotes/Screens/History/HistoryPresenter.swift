@@ -7,15 +7,19 @@
 
 import Foundation
 
-protocol HistoryPresentationLogic {
+protocol HistoryPresentation {
     func presentHistoryQuotes(data: [QuoteEntity])
 }
 
-class HistoryPresenter{
+class HistoryPresenter {
     weak var viewController: HistoryViewController?
+    
+    init(viewController: HistoryViewController?){
+        self.viewController = viewController
+    }
 }
 
-extension HistoryPresenter : HistoryPresentationLogic {
+extension HistoryPresenter : HistoryPresentation {
     
     func presentHistoryQuotes(data: [QuoteEntity]) {
         let viewModel = data.map{ entity -> Quote in

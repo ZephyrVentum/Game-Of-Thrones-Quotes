@@ -14,9 +14,14 @@ protocol HistoryRoutingLogic {
 class HistoryRouter {
     weak var viewController: HistoryViewController?
     weak var quoteTabDelegate: NavigateToQuoteTabDelegate?
+    
+    init(viewController: HistoryViewController?){
+        self.viewController = viewController
+    }
 }
 
-extension HistoryRouter : HistoryRoutingLogic{
+extension HistoryRouter : HistoryRoutingLogic {
+    
     func navigateToQuoteTab(quote: Quote) {
         quoteTabDelegate?.navigateToQuoteTab(quote: quote)
     }

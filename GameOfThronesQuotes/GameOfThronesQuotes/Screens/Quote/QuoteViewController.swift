@@ -7,54 +7,56 @@
 
 import UIKit
 
-protocol QuoteDisplayLogic {
-    func displayData()
+protocol ShowQuote {
+    func showQuote(quote: Quote)
 }
 
-class QuoteViewController: UIViewController {
+protocol ShowErrorDialog {
+    func showErrorDialog(error: Error)
+}
 
-    @IBOutlet weak var quoteAuthor: UILabel!
+
+class QuoteViewController: UIViewController {
+    private var interactor: QuoteInteractor!
+    private(set) var router: QuoteRouter!
     
-    private var interactor: QuoteInteractor?
-    var quoteToShow: Quote? {
-        didSet {
-            guard isViewLoaded else { return }
-            quoteAuthor.text = quoteToShow?.author
-        }
+    @IBOutlet weak var quoteAuthor: UILabel!
+    @IBAction func didRandomQuoteClick(_ sender: Any) {
+        interactor.fetchRandomQuote()
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
     
-    private func setup(){
-        let viewController = self
-        let presenter = QuotePresenter()
-        let interactor = QuoteInteractor()
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        viewController.interactor = interactor
+    private func setup() {
+        interactor = QuoteInteractor(viewController: self)
+        router = QuoteRouter(viewController: self,
+                             handleHistoryQuoteDelegate: interactor)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBAction func didRandomQuoteClick(_ sender: Any) {
-        interactor?.fetchRandomQuote()
-    }
-    
 }
 
-extension QuoteViewController: QuoteDisplayLogic{
-    func displayData() {
-
+extension QuoteViewController: ShowQuote {
+    
+    func showQuote(quote: Quote) {
+        guard isViewLoaded else { return }
+        quoteAuthor.text = quote.author
     }
-        
+}
+
+extension QuoteViewController : ShowErrorDialog {
+    
+    func showErrorDialog(error: Error) {
+        //todo show dialog
+    }
 }

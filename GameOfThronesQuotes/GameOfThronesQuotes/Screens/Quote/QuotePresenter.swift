@@ -7,21 +7,47 @@
 
 import Foundation
 
-protocol QuotePresentationLogic {
-    func presentQuoteResponse(data: QuoteResponse)
+protocol QuotePresentation {
+    func presentQuote(data: QuoteResponse)
 }
 
-class QuotePresenter{
+protocol ErrorPresentation{
+    func presentError(error: Error)
+}
+
+protocol HistoryQuotePresentation {
+    func presentHistoryQuote(quote: Quote)
+}
+
+class QuotePresenter {
     weak var viewController: QuoteViewController?
+    
+    init(viewController: QuoteViewController?){
+        self.viewController = viewController
+    }
 }
 
-extension QuotePresenter : QuotePresentationLogic {
-    func presentQuoteResponse(data: QuoteResponse) {
-        viewController?.quoteToShow = Quote(id: 0,
+extension QuotePresenter : QuotePresentation {
+    
+    func presentQuote(data: QuoteResponse) {
+        viewController?.showQuote(quote: Quote(id: 0,
                                             author: data.character.name,
                                             text: data.sentence,
                                             house: data.character.house.name ?? "",
-                                            date: "01/01/1970")
+                                            date: "01/01/1970"))
     }
+}
 
+extension QuotePresenter : ErrorPresentation {
+    
+    func presentError(error: Error) {
+        viewController?.showErrorDialog(error: error)
+    }
+}
+
+extension QuotePresenter : HistoryQuotePresentation {
+    
+    func presentHistoryQuote(quote: Quote) {
+        viewController?.showQuote(quote: quote)
+    }
 }
