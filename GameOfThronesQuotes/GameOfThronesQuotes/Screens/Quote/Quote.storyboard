@@ -32,6 +32,14 @@
                                     <action selector="didRandomQuoteClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="p9P-Mg-zrg"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="c8M-Vm-VH5">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="DIY-uK-Itr"/>
+                                    <constraint firstAttribute="height" constant="50" id="EHU-Au-lPg"/>
+                                </constraints>
+                                <color key="color" systemColor="systemYellowColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,12 +47,15 @@
                             <constraint firstItem="1FT-In-8FO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="I0r-04-19M"/>
                             <constraint firstItem="1FT-In-8FO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Re5-gi-8Qf"/>
                             <constraint firstItem="1FT-In-8FO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Sy5-qx-waJ"/>
+                            <constraint firstItem="c8M-Vm-VH5" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="WmF-9T-yqE"/>
+                            <constraint firstItem="c8M-Vm-VH5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cf3-kT-7zA"/>
                             <constraint firstItem="1FT-In-8FO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="mez-2w-saL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quote" image="quote.bubble" catalog="system" id="yjE-eN-AoO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="c8M-Vm-VH5" id="5U9-uA-ViX"/>
                         <outlet property="quoteAuthor" destination="1FT-In-8FO" id="lMy-7j-pQa"/>
                     </connections>
                 </viewController>
@@ -57,6 +68,9 @@
         <image name="quote.bubble" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

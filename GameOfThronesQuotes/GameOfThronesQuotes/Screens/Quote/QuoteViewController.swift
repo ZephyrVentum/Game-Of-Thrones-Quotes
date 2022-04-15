@@ -20,8 +20,11 @@ class QuoteViewController: UIViewController {
     private var interactor: QuoteInteractor!
     private(set) var router: QuoteRouter!
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var quoteAuthor: UILabel!
     @IBAction func didRandomQuoteClick(_ sender: Any) {
+        guard loadingIndicator.isHidden else { return }
+        loadingIndicator.startAnimating()
         interactor.fetchRandomQuote()
     }
     
@@ -43,6 +46,14 @@ class QuoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureActivityIndicator()
+    }
+    
+    private func configureActivityIndicator(){
+//        loadingIndicator.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
+        loadingIndicator.backgroundColor = .black
+        loadingIndicator.layer.cornerRadius = 8
+        loadingIndicator.hidesWhenStopped = true
     }
 }
 
@@ -50,6 +61,7 @@ extension QuoteViewController: ShowQuote {
     
     func showQuote(quote: Quote) {
         guard isViewLoaded else { return }
+        loadingIndicator.stopAnimating()
         quoteAuthor.text = quote.author
     }
 }
@@ -57,6 +69,8 @@ extension QuoteViewController: ShowQuote {
 extension QuoteViewController : ShowErrorDialog {
     
     func showErrorDialog(error: Error) {
-        //todo show dialog
+        loadingIndicator.stopAnimating()
+        //todo return to IDLE state
+        router.showErrorDialog(error: error)
     }
 }
