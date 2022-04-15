@@ -18,20 +18,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfG-Hv-X1R">
-                        <rect key="frame" x="16" y="16" width="302" height="37"/>
+                        <rect key="frame" x="16" y="16" width="302" height="110"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKV-UC-uDB">
-                        <rect key="frame" x="16" y="61" width="302" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKV-UC-uDB">
+                        <rect key="frame" x="16" y="134" width="302" height="17"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dKV-UC-uDB" secondAttribute="bottom" constant="16" id="34S-Mq-IOk"/>
+                    <constraint firstAttribute="bottom" secondItem="dKV-UC-uDB" secondAttribute="bottom" constant="16" id="34S-Mq-IOk"/>
                     <constraint firstItem="kfG-Hv-X1R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6sE-2O-EQT"/>
                     <constraint firstAttribute="trailing" secondItem="kfG-Hv-X1R" secondAttribute="trailing" constant="16" id="ATU-ai-EJZ"/>
                     <constraint firstAttribute="trailing" secondItem="dKV-UC-uDB" secondAttribute="trailing" constant="16" id="VJW-uD-Uap"/>

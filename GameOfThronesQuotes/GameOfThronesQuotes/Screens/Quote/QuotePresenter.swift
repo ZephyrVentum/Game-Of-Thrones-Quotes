@@ -8,11 +8,7 @@
 import Foundation
 
 protocol QuotePresentation {
-    func presentQuote(data: QuoteResponse)
-}
-
-protocol ErrorPresentation{
-    func presentError(error: Error)
+    func presentQuote(data: Quote)
 }
 
 protocol HistoryQuotePresentation {
@@ -29,19 +25,15 @@ class QuotePresenter {
 
 extension QuotePresenter : QuotePresentation {
     
-    func presentQuote(data: QuoteResponse) {
-        viewController?.showQuote(quote: Quote(id: 0,
-                                            author: data.character.name,
-                                            text: data.sentence,
-                                            house: data.character.house.name ?? "",
-                                            date: "01/01/1970"))
+    func presentQuote(data: Quote) {
+        viewController?.showQuote(quote: data)
     }
 }
 
-extension QuotePresenter : ErrorPresentation {
+extension QuotePresenter : ErrorPresenting {
     
     func presentError(error: Error) {
-        viewController?.showErrorDialog(error: error)
+        viewController?.handleError(error: error)
     }
 }
 

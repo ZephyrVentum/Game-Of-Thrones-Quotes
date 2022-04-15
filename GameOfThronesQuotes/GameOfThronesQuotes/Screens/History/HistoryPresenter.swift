@@ -22,14 +22,21 @@ class HistoryPresenter {
 extension HistoryPresenter : HistoryPresentation {
     
     func presentHistoryQuotes(data: [QuoteEntity]) {
-        let viewModel = data.map{ entity -> Quote in
-            let quote = Quote(id: entity.id,
-                              author: entity.author,
-                              text: entity.text,
-                              house: entity.house,
-                              date: entity.date)
+        let viewModel = data.map { entity -> Quote in
+            let quote = Quote(author: entity.author ?? "",
+                              text: entity.text ?? "",
+                              house: entity.house ?? "",
+                              houseSlug: entity.house ?? "",
+                              date: entity.date ?? Date())
             return quote
         }
         viewController?.displayHistoryQuotes(data: viewModel)
+    }
+}
+
+extension HistoryPresenter : ErrorPresenting {
+    
+    func presentError(error: Error) {
+        viewController?.handleError(error: error)
     }
 }

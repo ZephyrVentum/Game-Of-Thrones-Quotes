@@ -18,7 +18,7 @@ protocol SetupToQuoteTabDelegate {
 class HomeRouter {
     weak var viewController: HomeViewController?
     
-    init(viewController: HomeViewController?){
+    init(viewController: HomeViewController?) {
         self.viewController = viewController
     }
 }
@@ -34,7 +34,7 @@ extension HomeRouter : NavigateToQuoteTabDelegate {
 
 extension HomeRouter : SetupToQuoteTabDelegate {
     
-     func setup(){
+     func setup() {
         let historyViewController = viewController?.viewControllers?.last as? HistoryViewController
         historyViewController?.router.quoteTabDelegate = self
     }

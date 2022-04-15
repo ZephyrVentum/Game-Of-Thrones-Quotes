@@ -11,6 +11,12 @@
 		D9267E092808452C009CD823 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E082808452C009CD823 /* Result.swift */; };
 		D9267E0B280845A8009CD823 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E0A280845A8009CD823 /* NetworkError.swift */; };
 		D9267E1128087074009CD823 /* QuoteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E1028087074009CD823 /* QuoteRouter.swift */; };
+		D9267E14280969A2009CD823 /* QuoteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E12280969A2009CD823 /* QuoteEntity+CoreDataClass.swift */; };
+		D9267E15280969A2009CD823 /* QuoteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E13280969A2009CD823 /* QuoteEntity+CoreDataProperties.swift */; };
+		D9267E1728096B0A009CD823 /* HistoryQuotesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E1628096B0A009CD823 /* HistoryQuotesWorker.swift */; };
+		D9267E1A28098416009CD823 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E1928098416009CD823 /* ErrorHandler.swift */; };
+		D9267E1C280987FC009CD823 /* ErrorPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E1B280987FC009CD823 /* ErrorPresenting.swift */; };
+		D9267E1E28098858009CD823 /* ErrorDialogShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E1D28098858009CD823 /* ErrorDialogShowing.swift */; };
 		D95036A828046BDB00A3EDB2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95036A728046BDB00A3EDB2 /* HomeViewController.swift */; };
 		D96D58CF2802F01A00448FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58CE2802F01A00448FCF /* AppDelegate.swift */; };
 		D96D58D12802F01A00448FCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58D02802F01A00448FCF /* SceneDelegate.swift */; };
@@ -24,7 +30,6 @@
 		D98F13C22805B9E100714F1E /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98F13C02805B9E100714F1E /* HistoryCell.xib */; };
 		D98F13CA2806C4DF00714F1E /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13C92806C4DF00714F1E /* Quote.swift */; };
 		D98F13CD2806C5D200714F1E /* QuoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13CC2806C5D200714F1E /* QuoteResponse.swift */; };
-		D98F13D02806CE7800714F1E /* QuoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13CF2806CE7800714F1E /* QuoteEntity.swift */; };
 		D98F13D2280712E800714F1E /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13D1280712E800714F1E /* HistoryRouter.swift */; };
 		D98F13D42807196F00714F1E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13D32807196F00714F1E /* HomeRouter.swift */; };
 		D9A47F39280569AE00D9F453 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A47F38280569AE00D9F453 /* Home.storyboard */; };
@@ -60,6 +65,12 @@
 		D9267E082808452C009CD823 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D9267E0A280845A8009CD823 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D9267E1028087074009CD823 /* QuoteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRouter.swift; sourceTree = "<group>"; };
+		D9267E12280969A2009CD823 /* QuoteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuoteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D9267E13280969A2009CD823 /* QuoteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuoteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D9267E1628096B0A009CD823 /* HistoryQuotesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryQuotesWorker.swift; sourceTree = "<group>"; };
+		D9267E1928098416009CD823 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		D9267E1B280987FC009CD823 /* ErrorPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenting.swift; sourceTree = "<group>"; };
+		D9267E1D28098858009CD823 /* ErrorDialogShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDialogShowing.swift; sourceTree = "<group>"; };
 		D95036A728046BDB00A3EDB2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D96D58CB2802F01A00448FCF /* GameOfThronesQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThronesQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96D58CE2802F01A00448FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +88,6 @@
 		D98F13C02805B9E100714F1E /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		D98F13C92806C4DF00714F1E /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		D98F13CC2806C5D200714F1E /* QuoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteResponse.swift; sourceTree = "<group>"; };
-		D98F13CF2806CE7800714F1E /* QuoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEntity.swift; sourceTree = "<group>"; };
 		D98F13D1280712E800714F1E /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
 		D98F13D32807196F00714F1E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		D9A47F38280569AE00D9F453 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -120,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				D9267E082808452C009CD823 /* Result.swift */,
-				D9267E0A280845A8009CD823 /* NetworkError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -132,6 +141,16 @@
 				D9267E062808231F009CD823 /* QuotesApiWorker.swift */,
 			);
 			path = Quote;
+			sourceTree = "<group>";
+		};
+		D9267E1828098402009CD823 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D9267E1928098416009CD823 /* ErrorHandler.swift */,
+				D9267E1B280987FC009CD823 /* ErrorPresenting.swift */,
+				D9267E1D28098858009CD823 /* ErrorDialogShowing.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 		D95036A528046B4800A3EDB2 /* Home */ = {
@@ -147,6 +166,7 @@
 		D95036A628046B8F00A3EDB2 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D9267E1828098402009CD823 /* common */,
 				D9A47F3F2805750000D9F453 /* History */,
 				D9A47F3A28056C7D00D9F453 /* Quote */,
 				D95036A528046B4800A3EDB2 /* Home */,
@@ -227,6 +247,7 @@
 		D98F13C82806BF2C00714F1E /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				D9267E0E28086997009CD823 /* Common */,
 				D98F13CE2806CE5400714F1E /* Database */,
 				D98F13CB2806C5A700714F1E /* Network */,
 			);
@@ -236,8 +257,8 @@
 		D98F13CB2806C5A700714F1E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D9267E0A280845A8009CD823 /* NetworkError.swift */,
 				D9267E0F280869AD009CD823 /* Quote */,
-				D9267E0E28086997009CD823 /* Common */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -245,7 +266,9 @@
 		D98F13CE2806CE5400714F1E /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				D98F13CF2806CE7800714F1E /* QuoteEntity.swift */,
+				D9267E12280969A2009CD823 /* QuoteEntity+CoreDataClass.swift */,
+				D9267E13280969A2009CD823 /* QuoteEntity+CoreDataProperties.swift */,
+				D9267E1628096B0A009CD823 /* HistoryQuotesWorker.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -418,12 +441,17 @@
 				D98F13D2280712E800714F1E /* HistoryRouter.swift in Sources */,
 				D98F13D42807196F00714F1E /* HomeRouter.swift in Sources */,
 				D96D58CF2802F01A00448FCF /* AppDelegate.swift in Sources */,
+				D9267E1C280987FC009CD823 /* ErrorPresenting.swift in Sources */,
 				D9267E072808231F009CD823 /* QuotesApiWorker.swift in Sources */,
+				D9267E1A28098416009CD823 /* ErrorHandler.swift in Sources */,
 				D98F13CA2806C4DF00714F1E /* Quote.swift in Sources */,
+				D9267E1728096B0A009CD823 /* HistoryQuotesWorker.swift in Sources */,
+				D9267E1E28098858009CD823 /* ErrorDialogShowing.swift in Sources */,
+				D9267E15280969A2009CD823 /* QuoteEntity+CoreDataProperties.swift in Sources */,
 				D9A47F452805858700D9F453 /* QuotePresenter.swift in Sources */,
-				D98F13D02806CE7800714F1E /* QuoteEntity.swift in Sources */,
 				D96D58D92802F01A00448FCF /* GameOfThronesQuotes.xcdatamodeld in Sources */,
 				D9A47F412805755D00D9F453 /* HistoryViewController.swift in Sources */,
+				D9267E14280969A2009CD823 /* QuoteEntity+CoreDataClass.swift in Sources */,
 				D9A47F4B2805AD7400D9F453 /* HistoryInteractor.swift in Sources */,
 				D96D58D12802F01A00448FCF /* SceneDelegate.swift in Sources */,
 				D9A47F3C280570A900D9F453 /* QuoteViewController.swift in Sources */,

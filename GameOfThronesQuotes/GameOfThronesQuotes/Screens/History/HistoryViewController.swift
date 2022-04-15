@@ -11,7 +11,7 @@ protocol HistoryDisplayLogic {
     func displayHistoryQuotes(data: [Quote])
 }
 
-class HistoryViewController: UIViewController {
+class HistoryViewController : UIViewController {
     private var interactor: HistoryInteractor!
     private(set) var router: HistoryRouter!
     private var historyQuotes = [Quote]()
@@ -36,6 +36,10 @@ class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         interactor?.obtainHistoryQuotes()
     }
     
@@ -52,7 +56,7 @@ class HistoryViewController: UIViewController {
     }
 }
 
-extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
+extension HistoryViewController : UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -64,11 +68,9 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard
-            let cell = tableView.dequeueReusableCell(
+        let cell = tableView.dequeueReusableCell(
             withIdentifier: HistoryCell.cellIdentifier,
-            for: indexPath) as? HistoryCell
-        else { return UITableViewCell() }
+            for: indexPath) as! HistoryCell
         cell.setup(data: historyQuotes[indexPath.row])
         return cell
     }
@@ -77,13 +79,34 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         router.navigateToQuoteTab(quote: historyQuotes[indexPath.row])
     }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            historyQuotes.remove(at: indexPath.row)
+            interactor.removeHistoryQuote(quote: historyQuotes[indexPath.row])
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+    }
 }
 
-extension HistoryViewController: HistoryDisplayLogic{
+extension HistoryViewController : HistoryDisplayLogic{
     
     func displayHistoryQuotes(data: [Quote]) {
         historyQuotes.removeAll()
         historyQuotes.append(contentsOf: data)
         tableView.reloadData()
+    }
+}
+
+extension HistoryViewController : ErrorHandling {
+    
+    func handleError(error: Error) {
+        router.showErrorDialog(error: error)
     }
 }

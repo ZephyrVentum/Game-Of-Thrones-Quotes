@@ -11,11 +11,6 @@ protocol ShowQuote {
     func showQuote(quote: Quote)
 }
 
-protocol ShowErrorDialog {
-    func showErrorDialog(error: Error)
-}
-
-
 class QuoteViewController: UIViewController {
     private var interactor: QuoteInteractor!
     private(set) var router: QuoteRouter!
@@ -66,9 +61,9 @@ extension QuoteViewController: ShowQuote {
     }
 }
 
-extension QuoteViewController : ShowErrorDialog {
+extension QuoteViewController : ErrorHandling {
     
-    func showErrorDialog(error: Error) {
+    func handleError(error: Error) {
         loadingIndicator.stopAnimating()
         //todo return to IDLE state
         router.showErrorDialog(error: error)

@@ -8,9 +8,9 @@
 import Foundation
 
 struct Quote {
-    let id: Int
     let author: String
     let text: String
     let house: String
-    let date: String
+    let houseSlug: String
+    let date: Date
 }

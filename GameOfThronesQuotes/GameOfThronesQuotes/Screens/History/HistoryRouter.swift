@@ -26,3 +26,11 @@ extension HistoryRouter : HistoryRoutingLogic {
         quoteTabDelegate?.navigateToQuoteTab(quote: quote)
     }
 }
+
+extension HistoryRouter : ErrorDialogShowing {
+    
+    func showErrorDialog(error: Error) {
+        guard let viewController = self.viewController else { return }
+        ErrorHandler.showErrorDialog(error: error, viewController: viewController)
+    }
+}
