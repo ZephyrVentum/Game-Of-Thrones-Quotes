@@ -27,7 +27,6 @@
 		D96D58F32802F01D00448FCF /* GameOfThronesQuotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58F22802F01D00448FCF /* GameOfThronesQuotesUITests.swift */; };
 		D96D58F52802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58F42802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift */; };
 		D98F13C12805B9E100714F1E /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13BF2805B9E100714F1E /* HistoryCell.swift */; };
-		D98F13C22805B9E100714F1E /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98F13C02805B9E100714F1E /* HistoryCell.xib */; };
 		D98F13CA2806C4DF00714F1E /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13C92806C4DF00714F1E /* Quote.swift */; };
 		D98F13CD2806C5D200714F1E /* QuoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13CC2806C5D200714F1E /* QuoteResponse.swift */; };
 		D98F13D2280712E800714F1E /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F13D1280712E800714F1E /* HistoryRouter.swift */; };
@@ -85,7 +84,6 @@
 		D96D58F22802F01D00448FCF /* GameOfThronesQuotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfThronesQuotesUITests.swift; sourceTree = "<group>"; };
 		D96D58F42802F01D00448FCF /* GameOfThronesQuotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfThronesQuotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D98F13BF2805B9E100714F1E /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
-		D98F13C02805B9E100714F1E /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		D98F13C92806C4DF00714F1E /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		D98F13CC2806C5D200714F1E /* QuoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteResponse.swift; sourceTree = "<group>"; };
 		D98F13D1280712E800714F1E /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				D98F13BF2805B9E100714F1E /* HistoryCell.swift */,
-				D98F13C02805B9E100714F1E /* HistoryCell.xib */,
 			);
 			path = HistoryCell;
 			sourceTree = "<group>";
@@ -406,7 +403,6 @@
 				D9A47F3E2805712D00D9F453 /* Quote.storyboard in Resources */,
 				D96D58DB2802F01C00448FCF /* Assets.xcassets in Resources */,
 				D9A47F432805757100D9F453 /* History.storyboard in Resources */,
-				D98F13C22805B9E100714F1E /* HistoryCell.xib in Resources */,
 				D9A47F39280569AE00D9F453 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -46,13 +46,7 @@ class HistoryViewController : UIViewController {
     private func configureTableView(){
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.tableFooterView = UIView(frame: .zero)
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        tableView.register(
-            UINib(
-                nibName: "HistoryCell",
-                bundle: nil),
-            forCellReuseIdentifier: HistoryCell.cellIdentifier)
     }
 }
 

@@ -20,6 +20,49 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a0r-6p-hBC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ENO-vh-6wN">
+                                    <rect key="frame" x="0.0" y="234" width="414" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="167" id="DSp-oB-NNE" customClass="HistoryCell" customModule="GameOfThronesQuotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="167"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DSp-oB-NNE" id="vig-j6-utB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="167"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-R1-wDa">
+                                                    <rect key="frame" x="16" y="16" width="382" height="110"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hX-De-eNs">
+                                                    <rect key="frame" x="16" y="134" width="382" height="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8Ug-R1-wDa" firstAttribute="top" secondItem="vig-j6-utB" secondAttribute="top" constant="16" id="Axp-a4-NmO"/>
+                                                <constraint firstAttribute="trailing" secondItem="2hX-De-eNs" secondAttribute="trailing" constant="16" id="Tfc-wO-h0d"/>
+                                                <constraint firstItem="2hX-De-eNs" firstAttribute="top" secondItem="8Ug-R1-wDa" secondAttribute="bottom" constant="8" id="U0X-NM-sXR"/>
+                                                <constraint firstItem="2hX-De-eNs" firstAttribute="leading" secondItem="vig-j6-utB" secondAttribute="leading" constant="16" id="aAO-LV-xIh"/>
+                                                <constraint firstAttribute="bottom" secondItem="2hX-De-eNs" secondAttribute="bottom" constant="16" id="kL8-54-VzH"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Ug-R1-wDa" secondAttribute="trailing" constant="16" id="p4C-Qo-rQq"/>
+                                                <constraint firstItem="8Ug-R1-wDa" firstAttribute="leading" secondItem="vig-j6-utB" secondAttribute="leading" constant="16" id="zQZ-26-SsG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <viewLayoutGuide key="safeArea" id="ymI-dV-YyR"/>
+                                        <connections>
+                                            <outlet property="content" destination="2hX-De-eNs" id="ajz-Hm-sws"/>
+                                            <outlet property="title" destination="8Ug-R1-wDa" id="8FJ-lh-e40"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
