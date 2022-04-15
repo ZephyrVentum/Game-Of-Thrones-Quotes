@@ -34,7 +34,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-R1-wDa">
-                                                    <rect key="frame" x="16" y="16" width="382" height="110"/>
+                                                    <rect key="frame" x="16" y="89" width="382" height="37"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="8Ug-R1-wDa" firstAttribute="top" secondItem="vig-j6-utB" secondAttribute="top" constant="16" id="Axp-a4-NmO"/>
+                                                <constraint firstItem="8Ug-R1-wDa" firstAttribute="top" secondItem="vig-j6-utB" secondAttribute="top" priority="250" constant="16" id="Axp-a4-NmO"/>
                                                 <constraint firstAttribute="trailing" secondItem="2hX-De-eNs" secondAttribute="trailing" constant="16" id="Tfc-wO-h0d"/>
                                                 <constraint firstItem="2hX-De-eNs" firstAttribute="top" secondItem="8Ug-R1-wDa" secondAttribute="bottom" constant="8" id="U0X-NM-sXR"/>
                                                 <constraint firstItem="2hX-De-eNs" firstAttribute="leading" secondItem="vig-j6-utB" secondAttribute="leading" constant="16" id="aAO-LV-xIh"/>

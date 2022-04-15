@@ -49,11 +49,14 @@ class HistoryQuoteWorker {
     
     func deleteQuote(quote: Quote, completer: @escaping (Result<Void, Error>) -> Void) {
         do {
-            let items = try context.fetch(QuoteEntity.fetchRequest())
+            let request = QuoteEntity.fetchRequest()
+            request.predicate = NSPredicate(format: "\(#keyPath(QuoteEntity.text)) = %@ AND date = %@", quote.text, quote.date as NSDate)
+            let items = try context.fetch(request)
             guard
-                let item = items.first(where: {item in item.text == quote.text})
+                let item = items.first
                 else { return }
             context.delete(item)
+            try context.save()
             DispatchQueue.main.async {
                 completer(.success(Void()))
             }

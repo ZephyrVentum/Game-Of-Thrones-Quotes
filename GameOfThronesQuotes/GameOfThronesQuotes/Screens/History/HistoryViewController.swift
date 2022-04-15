@@ -52,14 +52,9 @@ class HistoryViewController : UIViewController {
 
 extension HistoryViewController : UITableViewDataSource, UITableViewDelegate {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return historyQuotes.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
@@ -74,17 +69,11 @@ extension HistoryViewController : UITableViewDataSource, UITableViewDelegate {
         router.navigateToQuoteTab(quote: historyQuotes[indexPath.row])
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
-    }
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tableView.beginUpdates()
-            historyQuotes.remove(at: indexPath.row)
             interactor.removeHistoryQuote(quote: historyQuotes[indexPath.row])
+            historyQuotes.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            tableView.endUpdates()
         }
     }
 }
