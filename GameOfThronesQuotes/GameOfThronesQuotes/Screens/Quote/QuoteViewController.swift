@@ -42,54 +42,14 @@ class QuoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configureTopBar()
         configureActivityIndicator()
     
     }
     
-    private func configureTopBar(){
-        let curve: CGFloat = 15
-        let extraShadowSpace: CGFloat = 25
-
-        let shadowPath = UIBezierPath()
-        shadowPath.move(to: CGPoint(
-            x: -extraShadowSpace,
-            y: 0
-        ))
-        shadowPath.addLine(to: CGPoint(
-            x: topBar.frame.width + extraShadowSpace,
-            y: 0
-        ))
-        shadowPath.addLine(to: CGPoint(
-            x: topBar.frame.width + extraShadowSpace,
-            y: topBar.frame.height + curve/3
-        ))
-        shadowPath.addCurve(
-            to: CGPoint(
-                x: -extraShadowSpace,
-                y: topBar.frame.height + curve/3
-            ),
-            controlPoint1: CGPoint(
-                x: topBar.frame.width + extraShadowSpace,
-                y: topBar.frame.height - curve
-            ),
-            controlPoint2: CGPoint(
-                x: -extraShadowSpace,
-                y: topBar.frame.height - curve
-            )
-        )
-        topBar.clipsToBounds = false
-        topBar.layer.shadowPath = shadowPath.cgPath
-        topBar.layer.shadowRadius = 10
-        topBar.layer.shadowOffset = .zero
-        topBar.layer.shadowOpacity = 0.5
-        topBar.layer.shadowColor = UIColor.black.cgColor
-    }
-    
     private func configureActivityIndicator(){
-//        loadingIndicator.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
-        loadingIndicator.backgroundColor = .black
-        loadingIndicator.layer.cornerRadius = 8
+        loadingIndicator.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
+//        loadingIndicator.backgroundColor = .black
+//        loadingIndicator.layer.cornerRadius = 8
         loadingIndicator.hidesWhenStopped = true
     }
 }
