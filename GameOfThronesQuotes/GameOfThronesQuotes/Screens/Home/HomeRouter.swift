@@ -16,9 +16,9 @@ protocol SetupToQuoteTabDelegate {
 }
 
 class HomeRouter {
-    weak var viewController: HomeViewController?
+    weak var viewController: TabBarController?
     
-    init(viewController: HomeViewController?) {
+    init(viewController: TabBarController?) {
         self.viewController = viewController
     }
 }

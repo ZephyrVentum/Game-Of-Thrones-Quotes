@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="56px" viewBox="0 0 320 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>top_bar</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="top-bar" fill="#537A8B">
+            <path d="M0,0 L320,0 L320,56 C249.287992,50.7767581 196.15421,48.1651371 160.598655,48.1651371 C125.043099,48.1651371 71.5102143,50.7767581 0,56 L0,0 Z" id="top_bar"></path>
+        </g>
+    </g>
+</svg>

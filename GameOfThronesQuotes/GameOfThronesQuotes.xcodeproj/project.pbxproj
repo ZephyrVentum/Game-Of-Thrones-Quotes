@@ -17,7 +17,9 @@
 		D9267E1A28098416009CD823 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E1928098416009CD823 /* ErrorHandler.swift */; };
 		D9267E1C280987FC009CD823 /* ErrorPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E1B280987FC009CD823 /* ErrorPresenting.swift */; };
 		D9267E1E28098858009CD823 /* ErrorDialogShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E1D28098858009CD823 /* ErrorDialogShowing.swift */; };
-		D95036A828046BDB00A3EDB2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95036A728046BDB00A3EDB2 /* HomeViewController.swift */; };
+		D9267E21280ADCE4009CD823 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E20280ADCE4009CD823 /* UIView+Extensions.swift */; };
+		D9267E23280AE078009CD823 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9267E22280AE078009CD823 /* HomeViewController.swift */; };
+		D95036A828046BDB00A3EDB2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95036A728046BDB00A3EDB2 /* TabBarController.swift */; };
 		D96D58CF2802F01A00448FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58CE2802F01A00448FCF /* AppDelegate.swift */; };
 		D96D58D12802F01A00448FCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D58D02802F01A00448FCF /* SceneDelegate.swift */; };
 		D96D58D92802F01A00448FCF /* GameOfThronesQuotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D96D58D72802F01A00448FCF /* GameOfThronesQuotes.xcdatamodeld */; };
@@ -70,7 +72,9 @@
 		D9267E1928098416009CD823 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		D9267E1B280987FC009CD823 /* ErrorPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenting.swift; sourceTree = "<group>"; };
 		D9267E1D28098858009CD823 /* ErrorDialogShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDialogShowing.swift; sourceTree = "<group>"; };
-		D95036A728046BDB00A3EDB2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D9267E20280ADCE4009CD823 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D9267E22280AE078009CD823 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D95036A728046BDB00A3EDB2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D96D58CB2802F01A00448FCF /* GameOfThronesQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThronesQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96D58CE2802F01A00448FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D96D58D02802F01A00448FCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,12 +155,21 @@
 			path = common;
 			sourceTree = "<group>";
 		};
+		D9267E1F280ADCD3009CD823 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9267E20280ADCE4009CD823 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D95036A528046B4800A3EDB2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D95036A728046BDB00A3EDB2 /* HomeViewController.swift */,
+				D95036A728046BDB00A3EDB2 /* TabBarController.swift */,
 				D9A47F38280569AE00D9F453 /* Home.storyboard */,
 				D98F13D32807196F00714F1E /* HomeRouter.swift */,
+				D9267E22280AE078009CD823 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -195,6 +208,7 @@
 		D96D58CD2802F01A00448FCF /* GameOfThronesQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				D9267E1F280ADCD3009CD823 /* Extensions */,
 				D98F13C82806BF2C00714F1E /* Workers */,
 				D98F13C72806BED000714F1E /* Models */,
 				D95036A628046B8F00A3EDB2 /* Screens */,
@@ -429,7 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9267E092808452C009CD823 /* Result.swift in Sources */,
-				D95036A828046BDB00A3EDB2 /* HomeViewController.swift in Sources */,
+				D95036A828046BDB00A3EDB2 /* TabBarController.swift in Sources */,
 				D98F13CD2806C5D200714F1E /* QuoteResponse.swift in Sources */,
 				D9267E1128087074009CD823 /* QuoteRouter.swift in Sources */,
 				D9A47F492805AD0D00D9F453 /* HistoryPresenter.swift in Sources */,
@@ -442,6 +456,7 @@
 				D9267E1A28098416009CD823 /* ErrorHandler.swift in Sources */,
 				D98F13CA2806C4DF00714F1E /* Quote.swift in Sources */,
 				D9267E1728096B0A009CD823 /* HistoryQuotesWorker.swift in Sources */,
+				D9267E23280AE078009CD823 /* HomeViewController.swift in Sources */,
 				D9267E1E28098858009CD823 /* ErrorDialogShowing.swift in Sources */,
 				D9267E15280969A2009CD823 /* QuoteEntity+CoreDataProperties.swift in Sources */,
 				D9A47F452805858700D9F453 /* QuotePresenter.swift in Sources */,
@@ -451,6 +466,7 @@
 				D9A47F4B2805AD7400D9F453 /* HistoryInteractor.swift in Sources */,
 				D96D58D12802F01A00448FCF /* SceneDelegate.swift in Sources */,
 				D9A47F3C280570A900D9F453 /* QuoteViewController.swift in Sources */,
+				D9267E21280ADCE4009CD823 /* UIView+Extensions.swift in Sources */,
 				D98F13C12805B9E100714F1E /* HistoryCell.swift in Sources */,
 				D9267E0B280845A8009CD823 /* NetworkError.swift in Sources */,
 			);

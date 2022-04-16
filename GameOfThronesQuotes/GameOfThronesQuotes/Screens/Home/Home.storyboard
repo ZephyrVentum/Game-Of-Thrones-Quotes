@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mP7-yT-IgI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pvJ-e4-kXQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,9 +21,119 @@
             <point key="canvasLocation" x="-880" y="-719"/>
         </scene>
         <!--Home View Controller-->
+        <scene sceneID="HcB-Or-zo6">
+            <objects>
+                <viewController id="pvJ-e4-kXQ" customClass="HomeViewController" customModule="GameOfThronesQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pcw-g9-mWe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwY-nX-rh6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="mP7-yT-IgI" kind="embed" id="WkC-6x-Wp0"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQb-x9-XuA">
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <color key="backgroundColor" name="barColor"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom_bar" translatesAutoresizingMaskIntoConstraints="NO" id="Ujo-Mv-EhO">
+                                <rect key="frame" x="-40" y="798" width="494" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="zTM-pm-Nac"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="-4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="shadowColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo6-is-x3b">
+                                <rect key="frame" x="0.0" y="500" width="74" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="quote_tab_button_active"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="4" height="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="shadowColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="quoteTabButtonClicked:" destination="pvJ-e4-kXQ" eventType="touchUpInside" id="gOG-dJ-bHy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ec-3L-7fG">
+                                <rect key="frame" x="170" y="559" width="74" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="history_tab_button_inactive"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="4" height="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="shadowColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="historyTabButtonClicked:" destination="pvJ-e4-kXQ" eventType="touchUpInside" id="2j7-C2-AR3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qV3-60-qTB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qV3-60-qTB" firstAttribute="trailing" secondItem="Ujo-Mv-EhO" secondAttribute="trailing" constant="-40" id="1F0-6C-WPv"/>
+                            <constraint firstAttribute="bottom" secondItem="tQb-x9-XuA" secondAttribute="bottom" id="2o4-mT-TQ1"/>
+                            <constraint firstAttribute="trailing" secondItem="tQb-x9-XuA" secondAttribute="trailing" id="HRZ-7h-mVJ"/>
+                            <constraint firstItem="BwY-nX-rh6" firstAttribute="top" secondItem="Pcw-g9-mWe" secondAttribute="top" id="IKQ-8P-gCV"/>
+                            <constraint firstAttribute="trailing" secondItem="BwY-nX-rh6" secondAttribute="trailing" id="KDf-ik-Cl2"/>
+                            <constraint firstAttribute="bottom" secondItem="BwY-nX-rh6" secondAttribute="bottom" id="QZA-vf-xWa"/>
+                            <constraint firstItem="tQb-x9-XuA" firstAttribute="top" secondItem="Ujo-Mv-EhO" secondAttribute="bottom" id="Sg0-WQ-omZ"/>
+                            <constraint firstItem="tQb-x9-XuA" firstAttribute="leading" secondItem="Pcw-g9-mWe" secondAttribute="leading" id="hYZ-9i-w2n"/>
+                            <constraint firstItem="BwY-nX-rh6" firstAttribute="leading" secondItem="Pcw-g9-mWe" secondAttribute="leading" id="jOj-Mg-yV4"/>
+                            <constraint firstItem="Ujo-Mv-EhO" firstAttribute="leading" secondItem="qV3-60-qTB" secondAttribute="leading" constant="-40" id="vgw-Yf-wq8"/>
+                            <constraint firstItem="qV3-60-qTB" firstAttribute="bottom" secondItem="Ujo-Mv-EhO" secondAttribute="bottom" id="yTA-fR-la3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="historyTabButton" destination="4ec-3L-7fG" id="cev-WL-CxO"/>
+                        <outlet property="quoteTabButton" destination="Uo6-is-x3b" id="jsI-BB-khp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BsY-I7-I4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2127" y="-624"/>
+        </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="DjO-Nr-16a">
             <objects>
-                <tabBarController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mP7-yT-IgI" customClass="HomeViewController" customModule="GameOfThronesQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mP7-yT-IgI" customClass="TabBarController" customModule="GameOfThronesQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fU1-72-eFa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -44,7 +157,21 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vc-W0-UuB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-885" y="-494"/>
+            <point key="canvasLocation" x="-875" y="-528"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bottom_bar" width="320" height="56"/>
+        <image name="history_tab_button_inactive" width="74" height="74"/>
+        <image name="quote_tab_button_active" width="74" height="74"/>
+        <namedColor name="barColor">
+            <color red="0.32549019607843138" green="0.47843137254901963" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="shadowColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

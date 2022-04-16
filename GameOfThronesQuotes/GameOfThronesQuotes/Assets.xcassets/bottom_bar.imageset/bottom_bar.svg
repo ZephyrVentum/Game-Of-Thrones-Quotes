@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="56px" viewBox="0 0 320 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bottom_bar</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Quote-Screen" transform="translate(0.000000, -624.000000)" fill="#537A8B">
+            <g id="Group" transform="translate(0.000000, 589.000000)">
+                <path d="M0,35 L320,35 L320,91 C249.287992,85.7767581 196.15421,83.1651371 160.598655,83.1651371 C125.043099,83.1651371 71.5102143,85.7767581 0,91 L0,35 Z" id="bottom_bar" transform="translate(160.000000, 63.000000) scale(1, -1) translate(-160.000000, -63.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
