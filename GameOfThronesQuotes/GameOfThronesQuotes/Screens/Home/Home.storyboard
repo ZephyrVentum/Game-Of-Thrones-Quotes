@@ -58,58 +58,62 @@
                                 <rect key="frame" x="0.0" y="862" width="414" height="34"/>
                                 <color key="backgroundColor" name="barColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ec-3L-7fG">
-                                <rect key="frame" x="170" y="559" width="74" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="history_tab_button_inactive"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="4" height="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" name="shadowColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="historyTabButtonClicked:" destination="pvJ-e4-kXQ" eventType="touchUpInside" id="2j7-C2-AR3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo6-is-x3b">
-                                <rect key="frame" x="0.0" y="500" width="74" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="quote_tab_button_active"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="4" height="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" name="shadowColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="quoteTabButtonClicked:" destination="pvJ-e4-kXQ" eventType="touchUpInside" id="gOG-dJ-bHy"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xa-NF-LIC">
+                                <rect key="frame" x="133" y="766" width="148" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo6-is-x3b">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="quote_tab_button_active"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="4" height="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="shadowColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="quoteTabButtonClicked:" destination="pvJ-e4-kXQ" eventType="touchUpInside" id="gOG-dJ-bHy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ec-3L-7fG">
+                                        <rect key="frame" x="74" y="0.0" width="74" height="74"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="history_tab_button_inactive"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="4" height="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="shadowColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="historyTabButtonClicked:" destination="pvJ-e4-kXQ" eventType="touchUpInside" id="2j7-C2-AR3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qV3-60-qTB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qV3-60-qTB" firstAttribute="trailing" secondItem="Ujo-Mv-EhO" secondAttribute="trailing" constant="-40" id="1F0-6C-WPv"/>
                             <constraint firstAttribute="bottom" secondItem="tQb-x9-XuA" secondAttribute="bottom" id="2o4-mT-TQ1"/>
+                            <constraint firstItem="5xa-NF-LIC" firstAttribute="centerX" secondItem="Pcw-g9-mWe" secondAttribute="centerX" id="7SY-dH-kL5"/>
                             <constraint firstAttribute="trailing" secondItem="tQb-x9-XuA" secondAttribute="trailing" id="HRZ-7h-mVJ"/>
                             <constraint firstItem="BwY-nX-rh6" firstAttribute="top" secondItem="Pcw-g9-mWe" secondAttribute="top" id="IKQ-8P-gCV"/>
                             <constraint firstAttribute="trailing" secondItem="BwY-nX-rh6" secondAttribute="trailing" id="KDf-ik-Cl2"/>
@@ -117,6 +121,7 @@
                             <constraint firstItem="tQb-x9-XuA" firstAttribute="top" secondItem="Ujo-Mv-EhO" secondAttribute="bottom" id="Sg0-WQ-omZ"/>
                             <constraint firstItem="tQb-x9-XuA" firstAttribute="leading" secondItem="Pcw-g9-mWe" secondAttribute="leading" id="hYZ-9i-w2n"/>
                             <constraint firstItem="BwY-nX-rh6" firstAttribute="leading" secondItem="Pcw-g9-mWe" secondAttribute="leading" id="jOj-Mg-yV4"/>
+                            <constraint firstItem="qV3-60-qTB" firstAttribute="bottom" secondItem="5xa-NF-LIC" secondAttribute="bottom" constant="22" id="q79-F8-147"/>
                             <constraint firstItem="Ujo-Mv-EhO" firstAttribute="leading" secondItem="qV3-60-qTB" secondAttribute="leading" constant="-40" id="vgw-Yf-wq8"/>
                             <constraint firstItem="qV3-60-qTB" firstAttribute="bottom" secondItem="Ujo-Mv-EhO" secondAttribute="bottom" id="yTA-fR-la3"/>
                         </constraints>
@@ -124,6 +129,7 @@
                     <connections>
                         <outlet property="historyTabButton" destination="4ec-3L-7fG" id="cev-WL-CxO"/>
                         <outlet property="quoteTabButton" destination="Uo6-is-x3b" id="jsI-BB-khp"/>
+                        <outlet property="tabButtonsStackView" destination="5xa-NF-LIC" id="MpJ-Cl-P3q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BsY-I7-I4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

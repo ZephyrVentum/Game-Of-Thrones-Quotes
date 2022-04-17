@@ -70,66 +70,88 @@
                                     <action selector="linkedInButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qnm-wy-5Sb"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wWA-ew-7DF">
-                                <rect key="frame" x="0.0" y="106" width="414" height="707"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWA-ew-7DF">
+                                <rect key="frame" x="0.0" y="108" width="414" height="788"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unknown_house" translatesAutoresizingMaskIntoConstraints="NO" id="cxP-JM-RxD">
-                                        <rect key="frame" x="0.0" y="35" width="414" height="140"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="4" height="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" name="shadowColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap the button!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FT-In-8FO">
-                                        <rect key="frame" x="105" y="263" width="191" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Mason-Regular" family="Mason" pointSize="26"/>
-                                        <color key="textColor" name="authorColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6b-GO-IjD">
-                                        <rect key="frame" x="130" y="402" width="154" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="quote_button"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="4" height="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" name="shadowColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="didRandomQuoteClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="p9P-Mg-zrg"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game of Thrones Quotes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGb-uM-5cZ">
-                                        <rect key="frame" x="8" y="191" width="377" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Mason-Regular" family="Mason" pointSize="24"/>
-                                        <color key="textColor" name="quoteTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tND-Kd-QL8" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1062.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown_house" translatesAutoresizingMaskIntoConstraints="NO" id="cxP-JM-RxD">
+                                                <rect key="frame" x="152.5" y="16" width="109" height="143"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="4" height="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" name="shadowColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGb-uM-5cZ">
+                                                <rect key="frame" x="16" y="175" width="382" height="706.5"/>
+                                                <mutableString key="text">Game of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones Quotes</mutableString>
+                                                <fontDescription key="fontDescription" name="Mason-Regular" family="Mason" pointSize="24"/>
+                                                <color key="textColor" name="quoteTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the button!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FT-In-8FO">
+                                                <rect key="frame" x="16" y="897.5" width="382" height="31"/>
+                                                <fontDescription key="fontDescription" name="Mason-Regular" family="Mason" pointSize="26"/>
+                                                <color key="textColor" name="authorColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6b-GO-IjD">
+                                                <rect key="frame" x="130" y="944.5" width="154" height="58"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="quote_button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="4" height="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" name="shadowColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didRandomQuoteClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="p9P-Mg-zrg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="r6b-GO-IjD" firstAttribute="top" secondItem="1FT-In-8FO" secondAttribute="bottom" constant="16" id="3KU-Sq-wm3"/>
+                                            <constraint firstItem="1FT-In-8FO" firstAttribute="top" secondItem="qGb-uM-5cZ" secondAttribute="bottom" constant="16" id="5bQ-JL-VhY"/>
+                                            <constraint firstAttribute="trailing" secondItem="1FT-In-8FO" secondAttribute="trailing" constant="16" id="87N-v4-2V2"/>
+                                            <constraint firstItem="qGb-uM-5cZ" firstAttribute="leading" secondItem="tND-Kd-QL8" secondAttribute="leading" constant="16" id="9ZB-ax-7rb"/>
+                                            <constraint firstItem="1FT-In-8FO" firstAttribute="leading" secondItem="tND-Kd-QL8" secondAttribute="leading" constant="16" id="F4c-Zl-3vu"/>
+                                            <constraint firstAttribute="bottom" secondItem="r6b-GO-IjD" secondAttribute="bottom" constant="60" id="J5l-FX-10m"/>
+                                            <constraint firstItem="cxP-JM-RxD" firstAttribute="centerX" secondItem="tND-Kd-QL8" secondAttribute="centerX" id="M6p-UA-ZKz"/>
+                                            <constraint firstItem="qGb-uM-5cZ" firstAttribute="top" secondItem="cxP-JM-RxD" secondAttribute="bottom" constant="16" id="Mtl-Td-S7y"/>
+                                            <constraint firstAttribute="trailing" secondItem="qGb-uM-5cZ" secondAttribute="trailing" constant="16" id="XKp-5L-ehf"/>
+                                            <constraint firstItem="r6b-GO-IjD" firstAttribute="centerX" secondItem="tND-Kd-QL8" secondAttribute="centerX" id="jRU-mi-3Tp"/>
+                                            <constraint firstItem="cxP-JM-RxD" firstAttribute="top" secondItem="tND-Kd-QL8" secondAttribute="top" constant="16" id="sSb-Z2-Cbs"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="tND-Kd-QL8" firstAttribute="top" secondItem="wWA-ew-7DF" secondAttribute="top" id="Eov-Rb-RvY"/>
+                                    <constraint firstAttribute="bottom" secondItem="tND-Kd-QL8" secondAttribute="bottom" id="MoT-De-HrO"/>
+                                    <constraint firstItem="tND-Kd-QL8" firstAttribute="width" secondItem="wWA-ew-7DF" secondAttribute="width" id="UhW-0z-neo"/>
+                                    <constraint firstItem="tND-Kd-QL8" firstAttribute="leading" secondItem="wWA-ew-7DF" secondAttribute="leading" id="YAm-S7-kIA"/>
+                                    <constraint firstAttribute="trailing" secondItem="tND-Kd-QL8" secondAttribute="trailing" id="e1O-Gt-AZQ"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="DdM-k8-8AZ"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="20F-m2-8bf"/>
                             </scrollView>
@@ -150,11 +172,15 @@
                             <constraint firstItem="udl-ec-9JF" firstAttribute="top" secondItem="rGn-hn-iwa" secondAttribute="bottom" id="1Ue-D5-mLm"/>
                             <constraint firstItem="Swu-Re-Yav" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="10" id="414-79-Ghu"/>
                             <constraint firstItem="rGn-hn-iwa" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="8aj-rC-pbi"/>
+                            <constraint firstAttribute="bottom" secondItem="wWA-ew-7DF" secondAttribute="bottom" id="AA0-Hd-xZC"/>
                             <constraint firstItem="Swu-Re-Yav" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="FbY-eH-UWQ"/>
                             <constraint firstItem="c8M-Vm-VH5" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="WmF-9T-yqE"/>
                             <constraint firstItem="udl-ec-9JF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="-40" id="Y69-Ya-U3h"/>
+                            <constraint firstItem="wWA-ew-7DF" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="cNf-bU-ami"/>
                             <constraint firstItem="c8M-Vm-VH5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cf3-kT-7zA"/>
+                            <constraint firstAttribute="trailing" secondItem="wWA-ew-7DF" secondAttribute="trailing" id="eV2-bx-8Ax"/>
                             <constraint firstItem="udl-ec-9JF" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="40" id="fdJ-oV-GVt"/>
+                            <constraint firstItem="wWA-ew-7DF" firstAttribute="top" secondItem="udl-ec-9JF" secondAttribute="bottom" id="rFO-CE-ZZc"/>
                             <constraint firstAttribute="trailing" secondItem="ino-LZ-LfS" secondAttribute="trailing" constant="10" id="rhc-mX-hUM"/>
                             <constraint firstItem="ino-LZ-LfS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="rkS-si-oFS"/>
                             <constraint firstAttribute="trailing" secondItem="rGn-hn-iwa" secondAttribute="trailing" id="xDo-MY-nhH"/>
@@ -166,7 +192,9 @@
                         <outlet property="houseImage" destination="cxP-JM-RxD" id="Cp5-cx-epo"/>
                         <outlet property="loadingIndicator" destination="c8M-Vm-VH5" id="5U9-uA-ViX"/>
                         <outlet property="quoteAuthor" destination="1FT-In-8FO" id="lMy-7j-pQa"/>
+                        <outlet property="quoteButtonTopConstraint" destination="3KU-Sq-wm3" id="Pr7-HI-0wZ"/>
                         <outlet property="quoteText" destination="qGb-uM-5cZ" id="Yz7-9O-WBp"/>
+                        <outlet property="scrollView" destination="wWA-ew-7DF" id="Fnc-F4-fnB"/>
                         <outlet property="topBar" destination="udl-ec-9JF" id="w1h-bV-Wl9"/>
                     </connections>
                 </viewController>

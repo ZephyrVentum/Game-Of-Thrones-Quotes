@@ -14,6 +14,7 @@ protocol SelectedTabIndexDelegate : AnyObject {
 
 class HomeViewController: UIViewController, SelectedTabIndexDelegate {
     
+    @IBOutlet weak var tabButtonsStackView: UIStackView!
     @IBOutlet weak var quoteTabButton: UIButton!
     @IBOutlet weak var historyTabButton: UIButton!
     
@@ -22,6 +23,11 @@ class HomeViewController: UIViewController, SelectedTabIndexDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tabButtonsStackView.spacing = (view.bounds.width - 148)/3
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

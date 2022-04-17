@@ -14,7 +14,9 @@ protocol ShowQuote {
 class QuoteViewController: UIViewController {
     private var interactor: QuoteInteractor!
     private(set) var router: QuoteRouter!
-    
+    private var initialQuoteButtonTopConstraint: CGFloat = 0
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var quoteButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var topBar: UIImageView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var houseImage: UIImageView!
@@ -45,7 +47,15 @@ class QuoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureActivityIndicator()
+        initialQuoteButtonTopConstraint = quoteButtonTopConstraint.constant
+    }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if scrollView.contentSize.height != 0, scrollView.bounds.height > scrollView.contentSize.height {
+            let space = scrollView.bounds.height - scrollView.contentSize.height
+            quoteButtonTopConstraint.constant = initialQuoteButtonTopConstraint + space
+        }
     }
     
     private func configureActivityIndicator(){

@@ -28,6 +28,7 @@ extension HomeRouter : NavigateToQuoteTabDelegate {
     func navigateToQuoteTab(quote: Quote) {
         let quoteViewController = viewController?.viewControllers?.first as? QuoteViewController
         quoteViewController?.router?.handleHistoryQuoteDelegate?.handleHistoryQuote(quote: quote)
+        viewController?.selectedTabIndexDelegate?.didSelectTabIndex(index: 0)
         viewController?.selectedIndex = 0
     }
 }

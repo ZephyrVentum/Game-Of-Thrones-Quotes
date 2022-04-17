@@ -29,8 +29,8 @@ class HistoryCell: UITableViewCell {
     }
     
     func setup(data: Quote){
-        title.text = data.author
-        content.text = data.text
+        title.text = data.text
+        content.text = data.author
         houseImage.image = UIImage(named: HouseImageMapper.mapHouseImage(houseSlug: data.houseSlug))
     }
     

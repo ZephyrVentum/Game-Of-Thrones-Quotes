@@ -23,6 +23,7 @@ class TabBarController: UITabBarController {
         setup()
     }
     
+    
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         selectedTabIndexDelegate?.didSelectTabIndex(index: item.title == "Quote" ? 0 : 1)
     }
