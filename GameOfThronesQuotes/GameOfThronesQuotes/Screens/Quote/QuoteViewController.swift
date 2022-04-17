@@ -17,6 +17,8 @@ class QuoteViewController: UIViewController {
     
     @IBOutlet weak var topBar: UIImageView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var houseImage: UIImageView!
+    @IBOutlet weak var quoteText: UILabel!
     @IBOutlet weak var quoteAuthor: UILabel!
     @IBAction func didRandomQuoteClick(_ sender: Any) {
         guard loadingIndicator.isHidden else { return }
@@ -60,6 +62,8 @@ extension QuoteViewController: ShowQuote {
         guard isViewLoaded else { return }
         loadingIndicator.stopAnimating()
         quoteAuthor.text = quote.author
+        quoteText.text = quote.text
+        houseImage.image = UIImage(named: HouseImageMapper.mapHouseImage(houseSlug: quote.houseSlug))
     }
 }
 

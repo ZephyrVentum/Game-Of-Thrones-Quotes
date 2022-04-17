@@ -13,6 +13,8 @@ class HistoryCell: UITableViewCell {
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var houseImage: UIImageView!
+    @IBOutlet weak var divider: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +31,7 @@ class HistoryCell: UITableViewCell {
     func setup(data: Quote){
         title.text = data.author
         content.text = data.text
+        houseImage.image = UIImage(named: HouseImageMapper.mapHouseImage(houseSlug: data.houseSlug))
     }
     
 }

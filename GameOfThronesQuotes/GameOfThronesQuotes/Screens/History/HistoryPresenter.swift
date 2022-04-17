@@ -26,7 +26,7 @@ extension HistoryPresenter : HistoryPresentation {
             let quote = Quote(author: entity.author ?? "",
                               text: entity.text ?? "",
                               house: entity.house ?? "",
-                              houseSlug: entity.house ?? "",
+                              houseSlug: entity.houseSlug ?? "",
                               date: entity.date ?? Date())
             return quote
         }

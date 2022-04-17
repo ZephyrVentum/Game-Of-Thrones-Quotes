@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MasonRegular.ttf">
+            <string>Mason-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--item-->
         <scene sceneID="s0d-6b-0kx">
@@ -34,23 +39,61 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-R1-wDa">
-                                                    <rect key="frame" x="16" y="89" width="382" height="37"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="16" y="83.5" width="382" height="28.5"/>
+                                                    <fontDescription key="fontDescription" name="Mason-Regular" family="Mason" pointSize="24"/>
+                                                    <color key="textColor" name="quoteTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hX-De-eNs">
-                                                    <rect key="frame" x="16" y="134" width="382" height="17"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="16" y="120" width="382" height="31"/>
+                                                    <fontDescription key="fontDescription" name="Mason-Regular" family="Mason" pointSize="26"/>
+                                                    <color key="textColor" name="authorColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stark_house" translatesAutoresizingMaskIntoConstraints="NO" id="2vL-0h-AKP">
+                                                    <rect key="frame" x="210" y="29.5" width="117" height="117"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="4" height="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" name="shadowColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="izC-Gu-MwB">
+                                                    <rect key="frame" x="16" y="141" width="382" height="10"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="2" height="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" name="shadowColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="8Ug-R1-wDa" firstAttribute="top" secondItem="vig-j6-utB" secondAttribute="top" priority="250" constant="16" id="Axp-a4-NmO"/>
+                                                <constraint firstItem="izC-Gu-MwB" firstAttribute="leading" secondItem="vig-j6-utB" secondAttribute="leading" constant="16" id="TCa-i5-PCE"/>
                                                 <constraint firstAttribute="trailing" secondItem="2hX-De-eNs" secondAttribute="trailing" constant="16" id="Tfc-wO-h0d"/>
                                                 <constraint firstItem="2hX-De-eNs" firstAttribute="top" secondItem="8Ug-R1-wDa" secondAttribute="bottom" constant="8" id="U0X-NM-sXR"/>
                                                 <constraint firstItem="2hX-De-eNs" firstAttribute="leading" secondItem="vig-j6-utB" secondAttribute="leading" constant="16" id="aAO-LV-xIh"/>
+                                                <constraint firstAttribute="bottom" secondItem="izC-Gu-MwB" secondAttribute="bottom" constant="16" id="dqv-Is-bny"/>
+                                                <constraint firstAttribute="trailing" secondItem="izC-Gu-MwB" secondAttribute="trailing" constant="16" id="hAu-xN-Z1r"/>
                                                 <constraint firstAttribute="bottom" secondItem="2hX-De-eNs" secondAttribute="bottom" constant="16" id="kL8-54-VzH"/>
                                                 <constraint firstAttribute="trailing" secondItem="8Ug-R1-wDa" secondAttribute="trailing" constant="16" id="p4C-Qo-rQq"/>
                                                 <constraint firstItem="8Ug-R1-wDa" firstAttribute="leading" secondItem="vig-j6-utB" secondAttribute="leading" constant="16" id="zQZ-26-SsG"/>
@@ -60,6 +103,8 @@
                                         <color key="backgroundColor" name="backgroundColor"/>
                                         <connections>
                                             <outlet property="content" destination="2hX-De-eNs" id="ajz-Hm-sws"/>
+                                            <outlet property="divider" destination="izC-Gu-MwB" id="A8c-8L-fv5"/>
+                                            <outlet property="houseImage" destination="2vL-0h-AKP" id="Q36-SD-rof"/>
                                             <outlet property="title" destination="8Ug-R1-wDa" id="8FJ-lh-e40"/>
                                         </connections>
                                     </tableViewCell>
@@ -83,13 +128,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="104"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="103.79464285714285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="divider" width="277" height="10"/>
+        <image name="stark_house" width="109" height="140"/>
         <image name="tray.2" catalog="system" width="128" height="114"/>
+        <namedColor name="authorColor">
+            <color red="0.25098039215686274" green="0.35294117647058826" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="backgroundColor">
             <color red="0.7686274509803922" green="0.81960784313725488" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="quoteTextColor">
+            <color red="0.23529411764705882" green="0.25490196078431371" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="shadowColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
