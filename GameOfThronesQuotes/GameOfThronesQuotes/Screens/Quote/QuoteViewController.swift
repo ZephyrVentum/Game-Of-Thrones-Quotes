@@ -50,10 +50,19 @@ class QuoteViewController: UIViewController {
     
     private func configureActivityIndicator(){
         loadingIndicator.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
-//        loadingIndicator.backgroundColor = .black
-//        loadingIndicator.layer.cornerRadius = 8
         loadingIndicator.hidesWhenStopped = true
     }
+    
+    @IBAction func githubButtonClicked(_ sender: Any) {
+        guard let url = URL(string: "https://github.com/ZephyrVentum/Game-Of-Thrones-Quotes") else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func linkedInButtonClicked(_ sender: Any) {
+        guard let url = URL(string: "https://www.linkedin.com/in/zephyr-ventum/") else { return }
+        UIApplication.shared.open(url)
+    }
+    
 }
 
 extension QuoteViewController: ShowQuote {

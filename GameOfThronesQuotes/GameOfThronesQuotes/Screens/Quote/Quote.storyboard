@@ -54,6 +54,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="to_github"/>
+                                <connections>
+                                    <action selector="githubButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dra-Cy-77d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ino-LZ-LfS">
                                 <rect key="frame" x="360" y="54" width="44" height="44"/>
@@ -63,6 +66,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="to_linkedin"/>
+                                <connections>
+                                    <action selector="linkedInButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qnm-wy-5Sb"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wWA-ew-7DF">
                                 <rect key="frame" x="0.0" y="106" width="414" height="707"/>
