@@ -74,7 +74,7 @@
                                 <rect key="frame" x="0.0" y="108" width="414" height="788"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tND-Kd-QL8" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1062.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="384.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown_house" translatesAutoresizingMaskIntoConstraints="NO" id="cxP-JM-RxD">
                                                 <rect key="frame" x="152.5" y="16" width="109" height="143"/>
@@ -93,21 +93,20 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGb-uM-5cZ">
-                                                <rect key="frame" x="16" y="175" width="382" height="706.5"/>
-                                                <mutableString key="text">Game of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones QuotesGame of Thrones Quotes</mutableString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game of Thrones Quotes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGb-uM-5cZ">
+                                                <rect key="frame" x="16" y="175" width="382" height="28.5"/>
                                                 <fontDescription key="fontDescription" name="Mason-Regular" family="Mason" pointSize="24"/>
                                                 <color key="textColor" name="quoteTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the button!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FT-In-8FO">
-                                                <rect key="frame" x="16" y="897.5" width="382" height="31"/>
+                                                <rect key="frame" x="16" y="219.5" width="382" height="31"/>
                                                 <fontDescription key="fontDescription" name="Mason-Regular" family="Mason" pointSize="26"/>
                                                 <color key="textColor" name="authorColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6b-GO-IjD">
-                                                <rect key="frame" x="130" y="944.5" width="154" height="58"/>
+                                                <rect key="frame" x="130" y="266.5" width="154" height="58"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="quote_button"/>
                                                 <userDefinedRuntimeAttributes>

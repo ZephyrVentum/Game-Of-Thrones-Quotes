@@ -14,7 +14,7 @@ protocol ShowQuote {
 class QuoteViewController: UIViewController {
     private var interactor: QuoteInteractor!
     private(set) var router: QuoteRouter!
-    private var initialQuoteButtonTopConstraint: CGFloat = 0
+//    private var initialQuoteButtonTopConstraint: CGFloat = 0
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var quoteButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var topBar: UIImageView!
@@ -47,16 +47,16 @@ class QuoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureActivityIndicator()
-        initialQuoteButtonTopConstraint = quoteButtonTopConstraint.constant
+//        initialQuoteButtonTopConstraint = quoteButtonTopConstraint.constant
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        if scrollView.contentSize.height != 0, scrollView.bounds.height > scrollView.contentSize.height {
-            let space = scrollView.bounds.height - scrollView.contentSize.height
-            quoteButtonTopConstraint.constant = initialQuoteButtonTopConstraint + space
-        }
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        if scrollView.contentSize.height != 0, scrollView.bounds.height > scrollView.contentSize.height {
+//            let space = scrollView.bounds.height - scrollView.contentSize.height
+//            quoteButtonTopConstraint.constant = initialQuoteButtonTopConstraint + space
+//        }
+//    }
     
     private func configureActivityIndicator(){
         loadingIndicator.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
@@ -80,7 +80,7 @@ extension QuoteViewController: ShowQuote {
     func showQuote(quote: Quote) {
         guard isViewLoaded else { return }
         loadingIndicator.stopAnimating()
-        quoteAuthor.text = quote.author
+        quoteAuthor.text = "— \(quote.author) —"
         quoteText.text = quote.text
         houseImage.image = UIImage(named: HouseImageMapper.mapHouseImage(houseSlug: quote.houseSlug))
     }
